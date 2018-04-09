@@ -11,6 +11,9 @@
 // Require our dependencies.
 var args         = require('yargs').argv,
 	autoprefixer = require('autoprefixer'),
+	bourbon      = require("bourbon").includePaths,
+	bitters      = require("bourbon-bitters").includePaths,
+	neat         = require("bourbon-neat").includePaths,	
 	browsersync  = require('browser-sync'),
 	bump         = require('gulp-bump'),
 	changecase   = require('change-case'),
@@ -73,7 +76,8 @@ gulp.task('woocommerce', function () {
 
 		// Process sass
 		.pipe(sass({
-			outputStyle: 'expanded'
+			outputStyle: 'expanded',
+			includePaths: [bourbon, bitters, neat]
 		}))
 
 		// Pixel fallbacks for rem units.
@@ -152,7 +156,8 @@ gulp.task('styles', ['woocommerce'], function () {
 
 		// Process sass
 		.pipe(sass({
-			outputStyle: 'expanded'
+			outputStyle: 'expanded',
+			includePaths: [bourbon, bitters, neat]
 		}))
 
 		// Pixel fallbacks for rem units.
@@ -182,7 +187,8 @@ gulp.task('styles', ['woocommerce'], function () {
 
 		// Process sass again.
 		.pipe(sass({
-			outputStyle: 'compressed'
+			outputStyle: 'compressed',
+			includePaths: [bourbon, bitters, neat]
 		}))
 
 		// Combine similar rules.

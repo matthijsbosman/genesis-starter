@@ -1,7 +1,8 @@
-# Ignore OS generated files
+# Ignore OS generated files.
 .DS_Store
 
 # Ignore node_modules.
 node_modules/
-aws.json
-ssl.json
+
+# Ignore vendor git folders.
+/vendor/**/.git
