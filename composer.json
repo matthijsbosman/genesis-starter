@@ -22,7 +22,10 @@
       "url": "https://github.com/seothemes/updevtools"
     }
   ],
-  "require": {},
+  "require": {
+    "seothemes/core": "*",
+    "mnsami/composer-custom-directory-installer": "1.1.*"
+  },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
     "squizlabs/php_codesniffer": "^3.2.3",
@@ -35,5 +38,10 @@
     "sort-order": true
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra":{
+    "installer-paths":{
+      "./includes/": ["seothemes/core"]
+    }
+  }
 }

@@ -8,7 +8,7 @@
 
 let gulp    = require( 'gulp' ),
 	csscomb = require( 'gulp-csscomb' ),
-	pkg     = require( './package.json' ),
+    pkg     = require( './package.json' ),
 	toolkit = require( 'gulp-wp-toolkit' );
 
 toolkit.extendConfig(

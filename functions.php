@@ -12,14 +12,14 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 
-	die;
+	exit;
 
 }
 
-// Load SEOThemes Library (do not remove).
-require_once get_stylesheet_directory() . '/lib/init.php';
+// Load child theme (do not remove).
+require_once get_stylesheet_directory() . '/src/init.php';
 
 /*
 |--------------------------------------------------------------------------
